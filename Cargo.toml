@@ -1,0 +1,17 @@
+[package]
+name = "swimmy-crab"
+description = "A game about a swimmy little crab named Bailey."
+version = "0.1.0"
+edition = "2021"
+exclude = ["tests/*"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = "0.7.0"
+
+[workspace]
+resolver = "2"
+
+[profile.dev]
+opt-level = 1
