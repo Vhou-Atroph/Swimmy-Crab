@@ -1,4 +1,4 @@
-
+mod utils;
 fn main() {
-    print!("swim swim")
+    utils::app::apprun()
 }
