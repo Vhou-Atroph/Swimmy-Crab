@@ -8,12 +8,12 @@ const BAILEY_SCALE: Vec3 = const_vec3!([2.0,2.0,0.0]);
 pub struct BaileyPlugin;
 impl Plugin for BaileyPlugin {
     fn build(&self,app:&mut App) {
-        app.add_system(make_bailey);
+        app.add_startup_system(make_bailey);
     }
 }
 
 #[derive(Component)]
-struct Bailey;
+pub struct Bailey;
 #[derive(Component)]
 pub struct BaileyState(bool);
 
