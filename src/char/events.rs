@@ -21,13 +21,19 @@ pub struct Collider;
 #[derive(Default)]
 struct CollisionEvent;
 
-/// Check for collision between objects
+/// Check for collision against dangerous non-debug brick objects
 fn collision_check() {
 
 }
 
+/// Checks for collisions against the top and bottom walls (debug bricks)
+fn wall_collis() {
+
+}
+
 /// Moves a character (specifically, Bailey), when a mouse button is clicked
-fn swim(buttons:Res<Input<MouseButton>>,mut query:Query<&mut Transform, With<crate::char::bailey::Bailey>>) {
+fn swim(buttons:Res<Input<MouseButton>>,
+    mut query:Query<&mut Transform, With<crate::char::bailey::Bailey>>) {
     
     let mut bailey_trans=query.single_mut();
     let mut direction=-0.095;

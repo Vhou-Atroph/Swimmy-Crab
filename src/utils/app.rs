@@ -13,12 +13,13 @@ pub fn apprun() {
     })
     .insert_resource(ClearColor(Color::rgb(0.0, 0.3, 0.5)))
     .add_plugins(DefaultPlugins)
+    .add_startup_system(twod_space)
     .add_plugin(LogDiagnosticsPlugin::default())
     .add_plugin(FrameTimeDiagnosticsPlugin::default())
-    .add_startup_system(twod_space)
     .add_plugin(crate::utils::testmod::TestMod)
     .add_plugin(crate::char::bailey::BaileyPlugin)
     .add_plugin(crate::char::events::Events)
+    .add_plugin(crate::char::dangers::DebugBrick) //only add this if you want to test death
     .run();
 }
 

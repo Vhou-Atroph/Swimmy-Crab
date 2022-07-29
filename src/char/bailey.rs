@@ -17,18 +17,19 @@ pub struct Bailey;
 #[derive(Component)]
 pub struct BaileyState(bool);
 
-fn make_bailey(mut commands:Commands,asset_server:Res<AssetServer>) {
+fn make_bailey(mut commands:Commands,
+    asset_server:Res<AssetServer>) {
     commands.spawn()
-    .insert(Bailey)
-    .insert_bundle(SpriteBundle {
-        transform: Transform {
-            translation: Vec3::new(-200.0,0.0,0.5),
-            scale: BAILEY_SCALE,
+        .insert(Bailey)
+        .insert_bundle(SpriteBundle {
+            transform: Transform {
+                translation: Vec3::new(-200.0,0.0,0.5),
+                scale: BAILEY_SCALE,
+                ..default()
+            },
+            texture: asset_server.load("sprites/bailey.png"),
             ..default()
-        },
-        texture: asset_server.load("sprites/bailey.png"),
-        ..default()
-    })
-    .insert(crate::char::events::Collider)
+        })
+        .insert(crate::char::events::Collider)
     ;
 }
