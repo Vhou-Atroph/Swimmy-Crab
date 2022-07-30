@@ -5,7 +5,7 @@ pub fn apprun() {
     App::new()
     .insert_resource(WindowDescriptor {
         title: "Swimmy Crab".to_string(),
-        width: 500.,
+        width: 550.,
         height: 650.,
         resizable: false,
         present_mode: PresentMode::Fifo,
@@ -24,5 +24,5 @@ pub fn apprun() {
 }
 
 fn twod_space(mut commands: Commands) {
-    commands.spawn_bundle(OrthographicCameraBundle::new_2d());
+    commands.spawn_bundle(Camera2dBundle::new_with_far(100.));
 }

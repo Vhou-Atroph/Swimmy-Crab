@@ -1,5 +1,5 @@
 //! Module for events and interactions between chars
-use bevy::{prelude::*,core::FixedTimestep,render::camera::Camera2d};
+use bevy::{prelude::*,time::FixedTimestep};
 
 //Constants
 pub const TIME_STEP: f32 = 1.0 / 300.0;
