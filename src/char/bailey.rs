@@ -2,7 +2,7 @@
 use bevy::{math::*,prelude::*};
 
 // Constants:
-const BAILEY_SCALE: Vec3 = const_vec3!([2.0,2.0,0.0]);
+const BAILEY_SCALE: Vec3 = Vec3::from_array([2.0,2.0,0.0]);
 
 /// Full plguin for Bailey
 pub struct BaileyPlugin;
