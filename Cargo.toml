@@ -10,6 +10,7 @@ license = "MIT"
 
 [dependencies]
 bevy = "0.8.0"
+bevy_rapier2d = "0.16.0"
 
 [workspace]
 resolver = "2"
